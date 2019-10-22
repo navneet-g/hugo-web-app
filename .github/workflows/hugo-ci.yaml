@@ -21,3 +21,16 @@ jobs:
         with:
           name: dist
           path: public
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # deploy web app using Azure credentials
+      - uses: azure/webapps-deploy@v1
+        with:
+          app-name: 'navneetg-hugo-web-app'
+          package: "./public"
+
+      # Azure logout 
+      - name: logout
+        run: |
+          az logout
