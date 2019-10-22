@@ -27,7 +27,7 @@ jobs:
       # deploy web app using Azure credentials
       - uses: azure/webapps-deploy@v1
         with:
-          app-name: 'navneetg-hugo-web-app-two'
+          app-name: 'navneetg-hugo-web-app-three'
           package: "./public"
 
       # Azure logout 
