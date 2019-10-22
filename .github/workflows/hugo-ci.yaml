@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
-          with:
-            fetch-depth: 1
-            submodules: recursive 
+        with:
+          fetch-depth: 1
+          submodules: recursive 
       - name: Install Hugo
         run: |
           sudo snap install hugo --channel=extended
