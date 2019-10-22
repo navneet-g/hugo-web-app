@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v1
       - name: Install Hugo
         run: |
-          snap install hugo --channel=extended
+          sudo snap install hugo --channel=extended
       - name: Build Site
         run: hugo
       - name: Archive production artifacts
